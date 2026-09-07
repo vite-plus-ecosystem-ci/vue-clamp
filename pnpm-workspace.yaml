@@ -24,10 +24,33 @@ catalog:
   stats.js: ^0.17.0
   typescript: ^6.0.3
   unplugin-vue: ^7.2.0
-  vite: ^8.0.11
-  vite-plus: ^0.1.20
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de
+  vite-plus: 0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de
   void: 0.10.12
   vue: ^3.5.33
   vue-tsc: ^3.2.7
+  vitest: 4.1.11
+  "@vitest/browser-playwright": 4.1.11
 
 catalogMode: prefer
+minimumReleaseAgeExclude:
+  - "@voidzero-dev/vite-plus-core@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-darwin-arm64@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-darwin-x64@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-linux-arm64-gnu@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-linux-arm64-musl@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-linux-x64-gnu@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-linux-x64-musl@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-win32-arm64-msvc@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - "@voidzero-dev/vite-plus-win32-x64-msvc@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de"
+  - vite-plus@0.0.0-commit.6d65e1780791e2b24b27cf7deb63f57a420e78de
+overrides:
+  vite@*: "catalog:"
+  vitest@*: "catalog:"
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: "*"
+    vitest: "*"
