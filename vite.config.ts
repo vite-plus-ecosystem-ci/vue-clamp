@@ -7,6 +7,7 @@ import { defineConfig } from "vite-plus";
 export default defineConfig({
   plugins: [vue(), defineRender()],
   pack: {
+    deps: { resolveDepSubpath: true },
     dts: { vue: true },
     platform: "neutral",
     plugins: [
