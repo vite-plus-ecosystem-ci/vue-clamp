@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: voidzero-dev/setup-vp@v1
+      - uses: voidzero-dev/setup-vp@v1.20.0
         with:
           cache: true
 
@@ -35,7 +35,7 @@ jobs:
           PLAYWRIGHT_CHROMIUM_CHANNEL: chrome
       - run: vp run build
       - name: Publish preview package
-        if: ${{ github.event_name != 'workflow_dispatch' }}
+        if: ${{ github.repository_owner != 'vite-plus-ecosystem-ci' && (github.event_name != 'workflow_dispatch') }}
         run: vp dlx pkg-pr-new publish --compact ./packages/vue-clamp
       - name: Deploy website to Void
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
