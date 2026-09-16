@@ -55,7 +55,9 @@
     "@types/node": "catalog:",
     "typescript": "catalog:",
     "unplugin-vue": "catalog:",
+    "vite": "catalog:",
     "vite-plus": "catalog:",
+    "vitest": "catalog:",
     "vue": "catalog:",
     "vue-tsc": "catalog:"
   },

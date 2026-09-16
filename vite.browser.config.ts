@@ -15,10 +15,12 @@ export default {
   plugins: [browserLogFilter, websiteCodeHighlightPlugin(), vue(), defineRender()],
   resolve: websiteResolve,
   test: {
+    clearMocks: false,
     include: ["packages/vue-clamp/tests/**/*.browser.test.ts"],
     fileParallelism: false,
     testTimeout: 30000,
     browser: {
+      locators: { exact: false },
       enabled: true,
       provider: createPlaywrightProvider(),
       headless: true,

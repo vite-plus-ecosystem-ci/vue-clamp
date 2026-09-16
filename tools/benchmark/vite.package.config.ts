@@ -47,10 +47,12 @@ export default {
     dedupe: ["vue"],
   },
   test: {
+    clearMocks: false,
     include: ["tools/benchmark/src/**/*.browser.benchmark.ts"],
     fileParallelism: false,
     testTimeout,
     browser: {
+      locators: { exact: false },
       enabled: true,
       provider: createPlaywrightProvider(),
       headless: true,
