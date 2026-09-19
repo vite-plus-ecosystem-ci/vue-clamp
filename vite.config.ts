@@ -20,6 +20,7 @@ const packPlugins = [
 export default {
   plugins: vitePlugins,
   pack: {
+    deps: { resolveDepSubpath: true },
     dts: { vue: true },
     platform: "neutral",
     plugins: packPlugins,
