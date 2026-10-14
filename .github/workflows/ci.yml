@@ -34,8 +34,10 @@ jobs:
         env:
           PLAYWRIGHT_CHROMIUM_CHANNEL: chrome
       - run: vp run build
+      # Ecosystem-ci smoke test: publishing a preview package needs a GitHub App or
+      # token the fork does not have, and it does not exercise the pinned Vite+.
       - name: Publish preview package
-        if: ${{ github.event_name != 'workflow_dispatch' }}
+        if: ${{ github.event_name != 'workflow_dispatch' && github.repository_owner != 'vite-plus-ecosystem-ci' }}
         run: vp dlx pkg-pr-new publish --compact ./packages/vue-clamp
       - name: Deploy website to Void
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
