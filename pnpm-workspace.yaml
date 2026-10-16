@@ -36,6 +36,23 @@ catalog:
 catalogMode: prefer
 
 minimumReleaseAgeExclude:
+  # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
+  - vite-plus
+  - "@voidzero-dev/*"
+  - "@oxc-project/*"
+  - oxlint
+  - "@oxlint/*"
+  - oxfmt
+  - "@oxfmt/*"
+  - oxlint-tsgolint
+  - "@oxlint-tsgolint/*"
+  - vitest
+  - "@vitest/*"
+  - tinybench
+  - yuku-core
+  - yuku-parser
+  - "@yuku-core/*"
+  - "@yuku-toolchain/*"
   - "@voidzero-dev/vite-plus-core@1.0.0"
   - "@voidzero-dev/vite-plus-darwin-arm64@1.0.0"
   - "@voidzero-dev/vite-plus-darwin-x64@1.0.0"
