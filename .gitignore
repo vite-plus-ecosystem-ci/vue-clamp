@@ -34,3 +34,4 @@ dist-ssr
 
 .void
 .wrangler/
+.vitest/
