@@ -27,11 +27,12 @@ catalog:
   stats.js: ^0.17.0
   typescript: npm:typescript-native-bridge@6.0.3-bridge.19.tsgo.7.0.2
   unplugin-vue: ^8.0.0
-  vite: npm:@voidzero-dev/vite-plus-core@1.5.0
-  vite-plus: ^1.0.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
+  vite-plus: 0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
   void: 1.6.2
   vue: ^3.5.42
   vue-tsc: ^3.3.11
+  vitest: 5.1.0
 
 catalogMode: prefer
 
@@ -62,10 +63,26 @@ minimumReleaseAgeExclude:
   - "@voidzero-dev/vite-plus-linux-x64-musl@1.0.0"
   - "@voidzero-dev/vite-plus-win32-arm64-msvc@1.0.0"
   - "@voidzero-dev/vite-plus-win32-x64-msvc@1.0.0"
-  - vite-plus@1.0.0
+  - "@tsrs/darwin-arm64@7.1.0-beta.tsrs2"
+  - "@tsrs/darwin-x64@7.1.0-beta.tsrs2"
+  - "@tsrs/linux-arm64-gnu@7.1.0-beta.tsrs2"
+  - "@tsrs/linux-arm64-musl@7.1.0-beta.tsrs2"
+  - "@tsrs/linux-x64-gnu@7.1.0-beta.tsrs2"
+  - "@tsrs/linux-x64-musl@7.1.0-beta.tsrs2"
+  - "@tsrs/win32-arm64@7.1.0-beta.tsrs2"
+  - "@tsrs/win32-x64@7.1.0-beta.tsrs2"
+  - tsrs@7.1.0-beta.tsrs2
 overrides:
   "@esbuild-kit/core-utils>esbuild": ^0.25.12
   "esbuild@>=0.27.3 <0.28.1": ^0.28.1
   typescript: npm:typescript-native-bridge@6.0.3-bridge.19.tsgo.7.0.2
   "valibot@<1.4.2": 1.4.2
   vite@*: "catalog:"
+  vitest@*: "catalog:"
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: "*"
+    vitest: "*"
